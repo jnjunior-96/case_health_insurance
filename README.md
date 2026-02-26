@@ -99,6 +99,8 @@ Foi desenvolvida uma aplicação interativa utilizando Streamlit que permite:
 
 ![Streamlit](relatorios/imagens/streamlit.png)
 
+[Acesse o app](https://case-health-insurance.streamlit.app/)
+
 ### Fluxo da aplicação
 
     - Usuário insere os dados
