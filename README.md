@@ -15,10 +15,10 @@ Projeto de Ciência de Dados desenvolvido como trabalho de Pós-Graduação com 
 
 A seguradora HealthSecure deseja:
 
-    - Identificar perfis de clientes de menor risco
-    - Avaliar se clientes com desconto realmente possuem menor custo
-    - Criar um modelo preditivo para precificação inteligente
-    - Definir margens estratégicas por perfil de cliente
+- Identificar perfis de clientes de menor risco
+- Avaliar se clientes com desconto realmente possuem menor custo
+- Criar um modelo preditivo para precificação inteligente
+- Definir margens estratégicas por perfil de cliente
 
 O projeto combina análise estatística, machine learning e aplicação prática de negócio para responder essas perguntas.
 
@@ -29,12 +29,12 @@ O projeto combina análise estatística, machine learning e aplicação prática
 Arquivo:
 [EDA](notebooks/01-jn-EDA.ipynb)
 
-    - Principais análises:
-    - Relação entre idade, IMC e gastos médicos
-    - Impacto de filhos nos custos
-    - Diferenças regionais
-    - Avaliação do impacto do desconto nos gastos
-    - Identificação de padrões de risco
+- Principais análises:
+- Relação entre idade, IMC e gastos médicos
+- Impacto de filhos nos custos
+- Diferenças regionais
+- Avaliação do impacto do desconto nos gastos
+- Identificação de padrões de risco
 
 ![Clusters](relatorios/imagens/analise_cluster.png)
 
@@ -49,16 +49,16 @@ Foi aplicado modelo de clusterização para identificar grupos com perfis semelh
 
 Objetivos:
 
-    - Criar segmentação baseada em risco
-    - Apoiar estratégia de marketing
-    - Definir margens diferentes por perfil
+- Criar segmentação baseada em risco
+- Apoiar estratégia de marketing
+- Definir margens diferentes por perfil
 
 Resultado:
 Foram identificados 4 clusters distintos, permitindo:
 
-    - Estratégia de margem personalizada
-    - Melhor controle de risco
-    - Política de desconto mais direcionada
+- Estratégia de margem personalizada
+- Melhor controle de risco
+- Política de desconto mais direcionada
 
 ![visualizacao_cluster](relatorios/imagens/visualizacao_cluster.png)
 
@@ -72,13 +72,13 @@ Foi desenvolvido um modelo supervisionado para prever:
 
 Variáveis utilizadas:
 
-    - Gênero
-    - Idade
-    - IMC
-    - Filhos
-    - Região
-    - Elegibilidade para desconto
-    -Cluster
+- Gênero
+- Idade
+- IMC
+- Filhos
+- Região
+- Elegibilidade para desconto
+-Cluster
 
 O modelo final foi serializado e utilizado na aplicação.
 
@@ -103,26 +103,26 @@ Foi desenvolvida uma aplicação interativa utilizando Streamlit que permite:
 
 ### Fluxo da aplicação
 
-    - Usuário insere os dados
-    - Modelo de cluster identifica o perfil
-    - Modelo de regressão estima o custo esperado
-    - Sistema aplica margem estratégica
-    - Exibe:
-        Previsão de Gastos
-            Valor a Cobrar
-            Lucro
-            Margem aplicada
+- Usuário insere os dados
+- Modelo de cluster identifica o perfil
+- Modelo de regressão estima o custo esperado
+- Sistema aplica margem estratégica
+- Exibe:
+    Previsão de Gastos
+        Valor a Cobrar
+        Lucro
+        Margem aplicada
 
 Isso simula uma estratégia real de precificação orientada a dados.
 
 
 🧠 Principais Aprendizados
 
-    - Aplicação prática de segmentação de clientes
-    - Integração entre clustering e regressão
-    - Tradução de modelo estatístico para regra de negócio
-    - Deploy de modelo com Streamlit
-    - Estrutura profissional de projeto de Data Science
+- Aplicação prática de segmentação de clientes
+- Integração entre clustering e regressão
+- Tradução de modelo estatístico para regra de negócio
+- Deploy de modelo com Streamlit
+- Estrutura profissional de projeto de Data Science
 
 ```
 📂 Estrutura do Projeto
