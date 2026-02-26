@@ -1,86 +1,158 @@
-# Modelo de projeto de ciência de dados
+## Análise de Gastos e Precificação – Health Insurance
 
-Modelo de projeto de ciência de dados para ser utilizado como referência em projetos
-futuros. Desenvolvido por mim, [Francisco Bustamante](https://github.com/chicolucio),
-para alunos iniciantes em ciência de dados de meus cursos e mentorias.
+Projeto de Ciência de Dados desenvolvido como trabalho de Pós-Graduação com foco em:
 
-Inspiração: [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
+- Análise exploratória de dados (EDA)
 
-Clique no botão **Use this template** para criar um novo repositório com base neste modelo.
+- Segmentação de clientes (Clustering)
 
-## Organização do projeto
+- Modelagem preditiva de gastos médicos (Regressão)
+
+- Deploy de aplicação interativa com Streamlit
+---
+
+## Objetivo do Projeto
+
+A seguradora HealthSecure deseja:
+
+    - Identificar perfis de clientes de menor risco
+    - Avaliar se clientes com desconto realmente possuem menor custo
+    - Criar um modelo preditivo para precificação inteligente
+    - Definir margens estratégicas por perfil de cliente
+
+O projeto combina análise estatística, machine learning e aplicação prática de negócio para responder essas perguntas.
+---
+
+## Etapas do Projeto
+
+### Análise Exploratória (EDA)
+Arquivo: 01-jn-EDA.ipynb
+
+    - Principais análises:
+    - Relação entre idade, IMC e gastos médicos
+    - Impacto de filhos nos custos
+    - Diferenças regionais
+    - Avaliação do impacto do desconto nos gastos
+    - Identificação de padrões de risco
+
+### Insight importante:
+Clientes com maior IMC e maior idade apresentam tendência significativa de aumento nos custos médicos.
+---
+
+## Segmentação de Clientes (Clustering)
+
+Arquivo: 02-jn-Clustering.ipynb
+
+Foi aplicado modelo de clusterização para identificar grupos com perfis semelhantes.
+
+Objetivos:
+
+    - Criar segmentação baseada em risco
+    - Apoiar estratégia de marketing
+    - Definir margens diferentes por perfil
+
+Resultado:
+Foram identificados 4 clusters distintos, permitindo:
+
+    - Estratégia de margem personalizada
+    - Melhor controle de risco
+    - Política de desconto mais direcionada
+
+---
+
+## Modelo de Regressão (Previsão de Gastos)
+
+Arquivo: 03-jn-Regressão.ipynb
+
+Foi desenvolvido um modelo supervisionado para prever:
+
+### Gastos médicos esperados por cliente
+
+Variáveis utilizadas:
+
+    - Gênero
+    - Idade
+    - IMC
+    - Filhos
+    - Região
+    - Elegibilidade para desconto
+    -Cluster
+
+O modelo final foi serializado e utilizado na aplicação.
+---
+
+## Aplicação Web com Streamlit
+
+Arquivo principal: home.py
+
+Foi desenvolvida uma aplicação interativa utilizando Streamlit que permite:
+
+✔ Inserir dados do cliente
+✔ Classificar automaticamente o cluster
+✔ Aplicar margem estratégica por perfil
+✔ Prever gastos médicos
+✔ Calcular valor ideal a ser cobrado
+✔ Exibir lucro estimado
+
+📊 Fluxo da aplicação
+
+    - Usuário insere os dados
+    - Modelo de cluster identifica o perfil
+    - Modelo de regressão estima o custo esperado
+    - Sistema aplica margem estratégica
+    - Exibe:
+        Previsão de Gastos
+            Valor a Cobrar
+            Lucro
+            Margem aplicada
+
+
+Isso simula uma estratégia real de precificação orientada a dados.
+
+---
+
+🧠 Principais Aprendizados
+
+    - Aplicação prática de segmentação de clientes
+    - Integração entre clustering e regressão
+    - Tradução de modelo estatístico para regra de negócio
+    - Deploy de modelo com Streamlit
+    - Estrutura profissional de projeto de Data Science
 
 ```
-├── .env               <- Arquivo de variáveis de ambiente (não versionar)
-├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
-├── ambiente.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
-├── LICENSE            <- Licença de código aberto se uma for escolhida
-├── README.md          <- README principal para desenvolvedores que usam este projeto.
-|
-├── dados              <- Arquivos de dados para o projeto.
-|
-├── modelos            <- Modelos treinados e serializados, previsões de modelos ou resumos de modelos
-|
-├── notebooks          <- Cadernos Jupyter. A convenção de nomenclatura é um número (para ordenação),
-│                         as iniciais do criador e uma descrição curta separada por `-`, por exemplo
-│                         `01-fb-exploracao-inicial-de-dados`.
-│
-|   └──src             <- Código-fonte para uso neste projeto.
-|      │
-|      ├── __init__.py  <- Torna um módulo Python
-|      ├── config.py    <- Configurações básicas do projeto
-|      └── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
-|
-├── referencias        <- Dicionários de dados, manuais e todos os outros materiais explicativos.
-|
-├── relatorios         <- Análises geradas em HTML, PDF, LaTeX, etc.
-│   └── imagens        <- Gráficos e figuras gerados para serem usados em relatórios
+📂 Estrutura do Projeto
+├── dados
+├── modelos
+├── notebooks
+│   ├── 01-jn-EDA.ipynb
+│   ├── 02-jn-Clustering.ipynb
+│   └── 03-jn-Regressão.ipynb
+├── notebooks/src
+│   ├── config.py
+│   └── graficos.py
+├── relatorios
+├── home.py
+└── README.md
+
 ```
 
-## Configuração do ambiente
+## Conclusão Estratégica
 
-1. Faça o clone do repositório que será criado a partir deste modelo.
+Este projeto demonstra como dados podem ser utilizados para:
 
-    ```bash
-    git clone ENDERECO_DO_REPOSITORIO
-    ```
+    - Reduzir risco atuarial
+    - Aumentar lucratividade
+    - Melhorar políticas de desconto
+    - Segmentar clientes de forma inteligente
 
-2. Crie um ambiente virtual para o seu projeto utilizando o gerenciador de ambientes de sua preferência.
+Mais do que um modelo preditivo, o projeto entrega uma solução de negócio aplicada.
 
-    a. Caso esteja utilizando o `conda`, exporte as dependências do ambiente para o arquivo `ambiente.yml`:
+---
 
-      ```bash
-      conda env export > ambiente.yml
-      ```
+👨‍💻 Autor
 
-    b. Caso esteja utilizando outro gerenciador de ambientes, exporte as dependências
-    para o arquivo `requirements.txt` ou outro formato de sua preferência. Adicione o
-    arquivo ao controle de versão, removendo o arquivo `ambiente.yml`.
+José Nivaldo
+[Linkedin](https://www.linkedin.com/in/jnjunior96/)
+[GitHub](https://github.com/jnjunior-96)
 
-3. Verifique o arquivo `notebooks/01-fb-exemplo.ipynb` para exemplos
-de uso do código.
-4. Renomeie o arquivo `notebooks/01-fb-exemplo.ipynb` para um nome
-mais apropriado ao seu projeto. E siga a convenção de nomenclatura para os demais
-notebooks.
-5. Remova arquivos de exemplo e adicione os arquivos de dados e notebooks do seu
-projeto.
-6. Verifique o arquivo `notebooks/src/config.py` para configurações básicas do projeto.
-Modifique conforme necessário, adicionando ou removendo caminhos de arquivos e
-diretórios.
-7. Atualize o arquivo `referencias/01_dicionario_de_dados.md` com o dicionário de dados
-do seu projeto.
-8. Atualize o `README.md` com informações sobre o seu projeto.
-9. Adicione uma licença ao projeto. Clique
-[aqui](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-se precisar de ajuda para escolher uma licença.
-10. Renomeie o arquivo `.env.exemplo` para `.env`
-11. Adicione variáveis de ambiente sensíveis ao arquivo `.env`.
 
-Por padrão, o arquivo `.gitignore` já está configurado para ignorar arquivos de dados e
-arquivos de Notebook (para aqueles que usam ferramentas como
-[Jupytext](https://jupytext.readthedocs.io/en/latest/) e similares). Adicione ou remova
-outros arquivos e diretórios do `.gitignore` conforme necessário. Caso deseje adicionar
-forçadamente um Notebook ao controle de versão, faça um commit forçado com o
-comando `git add --force NOME_DO_ARQUIVO.ipynb`.
-
-Para mais informações sobre como usar Git e GitHub, [clique aqui](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/). Sobre ambientes virtuais, [clique aqui](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/).
