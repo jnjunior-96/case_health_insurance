@@ -19,9 +19,11 @@ A seguradora HealthSecure deseja:
     - Avaliar se clientes com desconto realmente possuem menor custo
     - Criar um modelo preditivo para precificação inteligente
     - Definir margens estratégicas por perfil de cliente
+    
+---
 
 O projeto combina análise estatística, machine learning e aplicação prática de negócio para responder essas perguntas.
----
+
 
 ## Etapas do Projeto
 
@@ -37,6 +39,7 @@ Arquivo: 01-jn-EDA.ipynb
 
 ### Insight importante:
 Clientes com maior IMC e maior idade apresentam tendência significativa de aumento nos custos médicos.
+
 ---
 
 ## Segmentação de Clientes (Clustering)
@@ -79,6 +82,7 @@ Variáveis utilizadas:
     -Cluster
 
 O modelo final foi serializado e utilizado na aplicação.
+
 ---
 
 ## Aplicação Web com Streamlit
