@@ -9,7 +9,7 @@ Projeto de Ciência de Dados desenvolvido como trabalho de Pós-Graduação com 
 - Modelagem preditiva de gastos médicos (Regressão)
 
 - Deploy de aplicação interativa com Streamlit
----
+
 
 ## Objetivo do Projeto
 
@@ -21,12 +21,13 @@ A seguradora HealthSecure deseja:
     - Definir margens estratégicas por perfil de cliente
 
 O projeto combina análise estatística, machine learning e aplicação prática de negócio para responder essas perguntas.
----
+
 
 ## Etapas do Projeto
 
 ### Análise Exploratória (EDA)
-Arquivo: 01-jn-EDA.ipynb
+Arquivo:
+[EDA](notebooks/01-jn-EDA.ipynb)
 
     - Principais análises:
     - Relação entre idade, IMC e gastos médicos
@@ -35,13 +36,14 @@ Arquivo: 01-jn-EDA.ipynb
     - Avaliação do impacto do desconto nos gastos
     - Identificação de padrões de risco
 
+![Clusters](relatorios/imagens/analise_cluster.png)
+
 ### Insight importante:
 Clientes com maior IMC e maior idade apresentam tendência significativa de aumento nos custos médicos.
----
 
 ## Segmentação de Clientes (Clustering)
 
-Arquivo: 02-jn-Clustering.ipynb
+Arquivo: [Clustering](notebooks/02-jn-Clustering.ipynb)
 
 Foi aplicado modelo de clusterização para identificar grupos com perfis semelhantes.
 
@@ -58,11 +60,11 @@ Foram identificados 4 clusters distintos, permitindo:
     - Melhor controle de risco
     - Política de desconto mais direcionada
 
----
+![visualizacao_cluster](relatorios/imagens/visualizacao_cluster.png)
 
 ## Modelo de Regressão (Previsão de Gastos)
 
-Arquivo: 03-jn-Regressão.ipynb
+Arquivo: [Modelo](notebooks/03-jn-Regressão.ipynb)
 
 Foi desenvolvido um modelo supervisionado para prever:
 
@@ -79,22 +81,25 @@ Variáveis utilizadas:
     -Cluster
 
 O modelo final foi serializado e utilizado na aplicação.
+
 ---
 
 ## Aplicação Web com Streamlit
 
-Arquivo principal: home.py
+Arquivo principal: [home](home.py)
 
 Foi desenvolvida uma aplicação interativa utilizando Streamlit que permite:
 
-✔ Inserir dados do cliente
-✔ Classificar automaticamente o cluster
-✔ Aplicar margem estratégica por perfil
-✔ Prever gastos médicos
-✔ Calcular valor ideal a ser cobrado
-✔ Exibir lucro estimado
+- Inserir dados do cliente
+- Classificar automaticamente o cluster
+- Aplicar margem estratégica por perfil
+- Prever gastos médicos
+- Calcular valor ideal a ser cobrado
+- Exibir lucro estimado
 
-📊 Fluxo da aplicação
+![Streamlit](relatorios/imagens/streamlit.png)
+
+### Fluxo da aplicação
 
     - Usuário insere os dados
     - Modelo de cluster identifica o perfil
@@ -106,10 +111,8 @@ Foi desenvolvida uma aplicação interativa utilizando Streamlit que permite:
             Lucro
             Margem aplicada
 
-
 Isso simula uma estratégia real de precificação orientada a dados.
 
----
 
 🧠 Principais Aprendizados
 
@@ -151,8 +154,12 @@ Mais do que um modelo preditivo, o projeto entrega uma solução de negócio apl
 
 👨‍💻 Autor
 
-José Nivaldo
-[Linkedin](https://www.linkedin.com/in/jnjunior96/)
-[GitHub](https://github.com/jnjunior-96)
+José Nivaldo.
+
+<p align="center"> 
+  <a href="https://www.linkedin.com/in/jnjunior96" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</p>
+
+
 
 

@@ -4,7 +4,11 @@ import streamlit as st
 
 from joblib import load
 
-from notebooks.src.config import DADOS_TRATADOS_CLUSTER, MODELO_FINAL, MODELO_CLUSTER
+# from notebooks.src.config import DADOS_TRATADOS_CLUSTER, MODELO_FINAL, MODELO_CLUSTER
+
+DADOS_TRATADOS_CLUSTER = "dados/Health Insurance Cluster.parquet"
+MODELO_CLUSTER = "modelos/CLUSTER.joblib"
+MODELO_FINAL = "modelos/liner_regression.joblib"
 
 @st.cache_data
 def carregar_dados_limpos():
