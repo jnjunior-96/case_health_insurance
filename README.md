@@ -154,7 +154,7 @@ Mais do que um modelo preditivo, o projeto entrega uma solução de negócio apl
 
 👨‍💻 Autor
 
-José Nivaldo
+José Nivaldo.
 
 <p align="center"> 
   <a href="https://www.linkedin.com/in/jnjunior96" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
